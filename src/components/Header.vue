@@ -41,18 +41,18 @@ export default {
 <style scoped>
 
 .logo-container {
-  height: 60px;
+  height: 80px;
   padding: 10px;
 }
 
 .logo {
-  height: 60px;
+  height: 80px;
 }
 
 header {
   position: relative;
   background-color: var(--headerBackground);
-  height: 80px;
+  height: 100px;
 }
 
 nav {
@@ -70,7 +70,7 @@ nav .navlink {
   text-align: center;
   font-size: 4.5vw;
   color: var(--headerText);
-  line-height: 60px;
+  line-height: 80px;
   flex-direction: row;
   width: 25vw;
   transition: background-color 1s ease;
@@ -114,8 +114,8 @@ nav .navlink:hover {
 }
 
 .icon {
-  height: 60px;
-  width: 60px;
+  height:80px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
