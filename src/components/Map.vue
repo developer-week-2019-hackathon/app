@@ -1,5 +1,6 @@
 <template>
   <div class="map-view">
+    <iframe src="/maps.html"></iframe>
   </div>
 </template>
 
