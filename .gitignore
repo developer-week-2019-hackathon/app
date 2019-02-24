@@ -17,3 +17,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Config.js with environment variables
+/geofencing/config.js
