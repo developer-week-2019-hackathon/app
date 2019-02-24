@@ -4,7 +4,7 @@ let devices = [
     imgUrl: '../../assets/skateboard1.jpg',
     type: 'skateboard',
     name: 'Santa Cruz',
-    fenced: true,
+    fenced: false,
     alert: false
   },
   {

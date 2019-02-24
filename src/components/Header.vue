@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo-container">
-      <img src="../assets/logo-wide.png" alt="signal.ly logo" class="logo">
+      <img src="../../public/assets/logo-wide.png" alt="signal.ly logo" class="logo">
     </div>
     <div class="icon">
       <input id="hamburger" type="checkbox" v-model="checkboxToggle">
@@ -121,7 +121,7 @@ nav .navlink:hover {
   justify-content: center;
   align-items: center;
   margin: 3vw;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="device-card">
+  <div v-on:click="handleSelect" class="device-card">
     <div class="img-box">
       <img :src="imgUrl" alt="device image" />
     </div>
@@ -7,10 +7,10 @@
       <h4>My {{ device.type }} <span class="device-name">{{ device.name }}</span></h4>
       <div class="button-box">
         <div class="lock-box">
-          <img v-if="device.fenced" src="../../public/assets/locked.png" />
+          <img v-if="fenced" v-on:click="handleClick" src="../../public/assets/locked.png" />
+          <img v-if="!fenced" v-on:click="handleClick" src="../../public/assets/unlocked.png" />
         </div>
       </div>
-      <button>{{ device.alert }}</button>
     </div>
   </div>
 </template>
@@ -20,7 +20,25 @@ export default {
   props: {
     device: Object,
     imgUrl: String,
-  }
+  },
+  data() {
+    return {
+      fenced: false
+    };
+  },
+  methods: {
+    handleClick() {
+      this.fenced = !this.fenced;
+    },
+    handleSelect() {
+      this.$router.push({ path: '/map' });
+    }
+  },
+  // created: {
+  //   checkFenced: function() {
+  //     this.fenced = this.$props.device.fenced;
+  //   }
+  // }
 };
 </script>
 
@@ -33,7 +51,7 @@ export default {
   margin: 5vw;
   display: grid;
   grid-gap: 0;
-  grid-template-rows: 200px 40px 70px;
+  grid-template-rows: 200px 40px 150px;
 }
 
 .img-box {
@@ -63,12 +81,13 @@ export default {
 }
 
 .lock-box {
-  height: 70px;
-  width: 45vw;
+  padding-top: 1px;
+  height: 150px;
+  width: 95vw;
 }
 
 .lock-box img {
-  max-height: 100%;
+  max-height: 80%;
 }
 
 </style>
