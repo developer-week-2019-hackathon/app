@@ -12,4 +12,9 @@ export default {
 
 <style scoped>
 
+iframe {
+  width: 100vw;
+  height: 88vh;
+
+}
 </style>

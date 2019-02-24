@@ -22,7 +22,7 @@ function getAdditionalData(fuzzySearchResults) {
 }
 
 function processAdditionalDataResponse(additionalDataResponse) {
-  if (
+  if(
     additionalDataResponse.additionalData &&
     additionalDataResponse.additionalData.length
   ) {
@@ -32,15 +32,13 @@ function processAdditionalDataResponse(additionalDataResponse) {
 
 function fenceCurrentPosition() {
   navigator.geolocation.getCurrentPosition(position => {
-    createFenceAndObject([
-      position.coords.longitude,
-      position.coords.latitude,
-    ]);
+    createFenceAndObject([position.coords.longitude, position.coords.latitude]);
   });
 }
 
 function createFenceAndObject(coordinates) {
-  saveFence({
+  saveFence(
+    {
       type: 'Feature',
       name: 'Fence' + Math.random(),
       geometry: {
@@ -53,12 +51,13 @@ function createFenceAndObject(coordinates) {
     tomtom.L.geoJson()
   ).then(fence => {
     console.log(fence);
-    saveObject({
+    saveObject(
+      {
         defaultProject: geofencingProjectId,
         name: 'Object' + Math.random(),
         properties: {
           fence: fence.data.id,
-          coordinates: coordinates,
+          coordinates: coordinates
         }
       },
       tomtom.L.geoJson()
