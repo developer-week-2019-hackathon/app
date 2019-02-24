@@ -1,25 +1,29 @@
-let seedData = [
+let devices = [
   {
-    username: 'sarah',
-    password: 123,
-    devices: [
-      {
-        key: 1,
-        type: 'skateboard',
-        name: 'Santa Cruz'
-      },
-      {
-        key: 2,
-        type: 'scooter',
-        name: 'Zip'
-      }
-    ]
+    key: 1,
+    imgUrl: '../assets/skateboard1.jpg',
+    name: 'Santa Cruz',
+    fenced: true,
+    alert: false
   },
-
+  {
+    key: 2,
+    imgUrl: '../assets/bike3.jpg',
+    name: 'Pedals',
+    fenced: false,
+    alert: false
+  },
+  {
+    key: 3,
+    imgUrl: '../assets/scooter2.jpg',
+    name: 'Zip',
+    fenced: false,
+    alert: false
+  }
 ];
 
 export default {
-  getSeedData() {
-    return seedData;
+  getDevices() {
+    return devices;
   }
 };

@@ -1,21 +1,32 @@
 <template>
   <div id="dash">
     <h2>Dashboard</h2>
+    <DeviceList :devices="devices" />
   </div>
 </template>
 
 <script>
+import DeviceList from './DeviceList.vue';
+import data from '../services/seedData';
 
 export default {
   props: {
   },
+  components: {
+    DeviceList
+  },
   data() {
     return {
+      devices: null
     };
   },
   created() {
+    this.devices = data.getDevices();
   },
   methods: {
+    handleAdd(newDevice) {
+      this.devices.push(newDevice);
+    }
   }
 };
 
