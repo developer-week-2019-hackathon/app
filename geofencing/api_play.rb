@@ -1,11 +1,5 @@
 require 'httparty'
-BASE_URI   = 'https://api.tomtom.com/geofencing/1/'.freeze
-PROJECT_ID = ''.freeze
-API_KEY    = ''.freeze
-ADMIN_KEY  = ''.freeze
-AUTH_QUERY = "key=#{API_KEY}&adminKey=#{ADMIN_KEY}".freeze
-HEADERS    = { 'Content-Type' => 'application/json' }.freeze
-
+load './config.rb'
 
 def create_fence(name, coordinates)
   HTTParty.post(

@@ -29,3 +29,39 @@ function processAdditionalDataResponse(additionalDataResponse) {
     displayPolygonOnTheMap(additionalDataResponse.additionalData[0]);
   }
 }
+
+function fenceCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(position => {
+    createFenceAndObject([
+      position.coords.longitude,
+      position.coords.latitude,
+    ]);
+  });
+}
+
+function createFenceAndObject(coordinates) {
+  saveFence({
+      type: 'Feature',
+      name: 'Fence' + Math.random(),
+      geometry: {
+        coordinates: coordinates,
+        radius: 50,
+        type: 'Point',
+        shapeType: 'Circle'
+      }
+    },
+    tomtom.L.geoJson()
+  ).then(fence => {
+    console.log(fence);
+    saveObject({
+        defaultProject: geofencingProjectId,
+        name: 'Object' + Math.random(),
+        properties: {
+          fence: fence.data.id,
+          coordinates: coordinates,
+        }
+      },
+      tomtom.L.geoJson()
+    );
+  });
+}

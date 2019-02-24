@@ -20,3 +20,4 @@ yarn-error.log*
 
 # Config.js with environment variables
 /geofencing/config.js
+/geofencing/config.rb

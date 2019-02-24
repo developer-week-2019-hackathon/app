@@ -7,6 +7,11 @@ var map = tomtom.L.map("map", {
 
 map.locate({ setView: true, maxZoom: 13 });
 
+var fenceButton = document.createElement('button');
+fenceButton.onclick = () => fenceCurrentPosition();
+var buttonText = document.createTextNode('Lock!!');
+fenceButton.appendChild(buttonText);
+
 tomtom
   .controlPanel({
     position: "topright",
@@ -15,7 +20,7 @@ tomtom
     close: null
   })
   .addTo(map)
-  .addContent('foo');
+  .addContent(fenceButton);
 
 var geoJsonOptions = {
   style: {

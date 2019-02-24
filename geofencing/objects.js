@@ -79,12 +79,10 @@ function removeObject(id) {
 }
 
 function saveObject(objectData, geoJson) {
-  axios
+  return axios
     .post(
       geofencingApiURL +
-      "projects/" +
-      geofencingProjectId +
-      "/object?key=" +
+      "objects/object?key=" +
       apiKey +
       "&adminKey=" +
       geofencingAdminKey,
@@ -103,7 +101,7 @@ function saveObject(objectData, geoJson) {
         });
     })
     .catch(function(err) {
-      displayModal(
+      console.log(
         "There was an error while saving objects: " + err.response.data.message
       );
     });
