@@ -1,6 +1,5 @@
 <template>
   <div id="dash">
-    <h2>Dashboard</h2>
     <DeviceList :devices="devices" />
   </div>
 </template>

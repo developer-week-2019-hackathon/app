@@ -5,8 +5,12 @@
     </div>
     <div class="info-box">
       <h4>My {{ device.type }} <span class="device-name">{{ device.name }}</span></h4>
-      <p>{{ device.fenced }}</p>
-      <p>{{ device.alert }}</p>
+      <div class="button-box">
+        <div class="lock-box">
+          <img v-if="device.fenced" src="../../public/assets/locked.png" />
+        </div>
+      </div>
+      <button>{{ device.alert }}</button>
     </div>
   </div>
 </template>
@@ -29,7 +33,7 @@ export default {
   margin: 5vw;
   display: grid;
   grid-gap: 0;
-  grid-template-rows: 200px 130px;
+  grid-template-rows: 200px 40px 70px;
 }
 
 .img-box {
@@ -51,4 +55,20 @@ export default {
 .device-name {
   font-style: italic;
 }
+
+.button-box {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+}
+
+.lock-box {
+  height: 70px;
+  width: 45vw;
+}
+
+.lock-box img {
+  max-height: 100%;
+}
+
 </style>

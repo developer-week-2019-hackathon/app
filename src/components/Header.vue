@@ -43,6 +43,7 @@ export default {
 .logo-container {
   height: 80px;
   padding: 10px;
+  text-align: left;
 }
 
 .logo {
