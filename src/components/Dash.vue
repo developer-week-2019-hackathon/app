@@ -1,26 +1,26 @@
 <template>
-  <div id="app">
-    <RouterView id="app-view" class="routes"></RouterView>
+  <div>
+    <h2>Dashboard</h2>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'app',
-  components: {
+  props: {
   },
   data() {
     return {
-      user: null
     };
   },
-  methods: {
-  },
   created() {
+  },
+  methods: {
   }
 };
+
 </script>
 
 <style scoped>
+
 </style>
