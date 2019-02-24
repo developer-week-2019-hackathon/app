@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo-container">
-      <img src="../../public/assets/logo-wide.png" alt="signal.ly logo" class="logo">
+      <a href="/"><img src="../../public/assets/logo-wide.png" alt="signal.ly logo" class="logo"></a>
     </div>
     <div class="icon">
       <input id="hamburger" type="checkbox" v-model="checkboxToggle">
