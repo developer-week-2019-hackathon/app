@@ -4,7 +4,7 @@ let devices = [
     imgUrl: '../../assets/skateboard1.jpg',
     type: 'skateboard',
     name: 'Santa Cruz',
-    fenced: false,
+    fenced: true,
     alert: false
   },
   {
@@ -12,7 +12,7 @@ let devices = [
     imgUrl: '../../assets/bike3.jpg',
     type: 'bike',
     name: 'Pedals',
-    fenced: false,
+    fenced: true,
     alert: false
   },
   {

@@ -1,6 +1,6 @@
 <template>
-  <div v-on:click="handleSelect" class="device-card">
-    <div class="img-box">
+  <div class="device-card">
+    <div class="img-box" v-on:click="handleSelect" >
       <img :src="imgUrl" alt="device image" />
     </div>
     <div class="info-box">
@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      fenced: false
+      fenced: this.device.fenced
     };
   },
   methods: {
@@ -33,12 +33,7 @@ export default {
     handleSelect() {
       this.$router.push({ path: '/map' });
     }
-  },
-  // created: {
-  //   checkFenced: function() {
-  //     this.fenced = this.$props.device.fenced;
-  //   }
-  // }
+  }
 };
 </script>
 
@@ -52,6 +47,7 @@ export default {
   display: grid;
   grid-gap: 0;
   grid-template-rows: 200px 40px 150px;
+  z-index: 999;
 }
 
 .img-box {
