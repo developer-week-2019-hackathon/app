@@ -2,7 +2,8 @@
   <div class="device-list">
   <Device v-for="device in devices"
     :key="device.key"
-    :device="device" />
+    :device="device"
+    :imgUrl="device.imgUrl" />
   </div>
 </template>
 
