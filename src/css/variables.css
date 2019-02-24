@@ -1,0 +1,12 @@
+:root {
+  --headerText: white;
+  --headerBackground: rgb(29, 28, 28);
+  --headerHover: rgb(56, 55, 55);
+  --theme0a: rgba(4, 21, 51, 0.555);
+  --theme1: rgb(24, 62, 88);
+  --theme1a: rgba(24, 62, 88, 0.616);
+  --theme3: rgb(176, 198, 204);
+  --theme2: rgb(123, 189, 207);
+  --theme4: white;
+  --theme5: rgb(252, 240, 220);
+}

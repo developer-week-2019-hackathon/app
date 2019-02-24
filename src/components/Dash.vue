@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="dash">
     <h2>Dashboard</h2>
   </div>
 </template>
@@ -22,5 +22,10 @@ export default {
 </script>
 
 <style scoped>
+
+#dash {
+  background-color: var(--theme1);
+  min-height: 100vh;
+}
 
 </style>

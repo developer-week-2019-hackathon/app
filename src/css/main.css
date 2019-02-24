@@ -1,0 +1,117 @@
+@import "./variables.css";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .5px;
+    color: var(--theme0);
+}
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+h2 {
+  padding: 0px 0 40px;
+  text-align: center;
+}
+
+h3 {
+  margin: 25px 0 12px;
+  text-align: center;
+}
+
+h4, h5, h6, p {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--theme0);
+}
+
+label {
+  color: var(--theme0);
+  font-size: 4.5vw;
+}
+
+.form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.button-block {
+  display: block;
+  margin: auto;
+  background-color: var(--theme1);
+  border: none;
+  border-radius: 5px;
+  color: var(--theme0);
+  padding: 7px 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.button-inline {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: var(--theme3);
+  color: var(--theme1);
+  padding: 6px 6px;
+  font-weight: 900;
+  font-size: 3.5vw;
+  border-radius: 5px;
+  border: none;
+}
+
+input {
+  padding: 5px;
+  width: 40vw;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme5);
+  font-weight: 600;
+  font-size: 18px;
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  font-size: 19px;
+}
+
+section {
+  width: 65vw;
+  margin: auto;
+}
+
+.section-background1 {
+  background-color: var(--theme1a);
+  padding: 5vw;
+  margin: 5vw;
+  border-radius: 20px;
+}
+
+.error {
+  color: var(--theme0);
+  font-size: 4.5vw;
+  padding: 5px;
+  text-align: center;
+}
